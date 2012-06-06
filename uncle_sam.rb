@@ -20,7 +20,7 @@ class Item
 		if  @@exempt[@category.to_sym]
 			tax = 0
 		else
-			tax = ((@cost * @qty) * 0.10).round_up_to_nickel
+			tax = (sub_total * 0.10).round_up_to_nickel
 		end
 		return tax
 	end
